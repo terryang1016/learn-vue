@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.元组 | learn-vue</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="learn-vue">
+    
+    <link rel="preload" href="/learn-vue/assets/css/0.styles.e071bbb8.css" as="style"><link rel="preload" href="/learn-vue/assets/js/app.d16f716d.js" as="script"><link rel="preload" href="/learn-vue/assets/js/3.dfda982a.js" as="script"><link rel="preload" href="/learn-vue/assets/js/1.f474e8b5.js" as="script"><link rel="preload" href="/learn-vue/assets/js/37.6df41011.js" as="script"><link rel="prefetch" href="/learn-vue/assets/js/10.e3101ac7.js"><link rel="prefetch" href="/learn-vue/assets/js/11.92716ba8.js"><link rel="prefetch" href="/learn-vue/assets/js/12.43d2afd3.js"><link rel="prefetch" href="/learn-vue/assets/js/13.03bff369.js"><link rel="prefetch" href="/learn-vue/assets/js/14.92df3b15.js"><link rel="prefetch" href="/learn-vue/assets/js/15.f898392d.js"><link rel="prefetch" href="/learn-vue/assets/js/16.477613d8.js"><link rel="prefetch" href="/learn-vue/assets/js/17.2901f31d.js"><link rel="prefetch" href="/learn-vue/assets/js/18.703312b8.js"><link rel="prefetch" href="/learn-vue/assets/js/19.d1c9033f.js"><link rel="prefetch" href="/learn-vue/assets/js/20.032f92fd.js"><link rel="prefetch" href="/learn-vue/assets/js/21.2f22cf78.js"><link rel="prefetch" href="/learn-vue/assets/js/22.240ba8b9.js"><link rel="prefetch" href="/learn-vue/assets/js/23.e6bbb092.js"><link rel="prefetch" href="/learn-vue/assets/js/24.4755d6d9.js"><link rel="prefetch" href="/learn-vue/assets/js/25.50473ca9.js"><link rel="prefetch" href="/learn-vue/assets/js/26.a495b306.js"><link rel="prefetch" href="/learn-vue/assets/js/27.d370af2d.js"><link rel="prefetch" href="/learn-vue/assets/js/28.03687596.js"><link rel="prefetch" href="/learn-vue/assets/js/29.42de594e.js"><link rel="prefetch" href="/learn-vue/assets/js/30.57d04a5d.js"><link rel="prefetch" href="/learn-vue/assets/js/31.d8a0e646.js"><link rel="prefetch" href="/learn-vue/assets/js/32.a4e20547.js"><link rel="prefetch" href="/learn-vue/assets/js/33.cfbb96af.js"><link rel="prefetch" href="/learn-vue/assets/js/34.2ca1a839.js"><link rel="prefetch" href="/learn-vue/assets/js/35.8d72967d.js"><link rel="prefetch" href="/learn-vue/assets/js/36.e2d911a5.js"><link rel="prefetch" href="/learn-vue/assets/js/38.d34f3d70.js"><link rel="prefetch" href="/learn-vue/assets/js/39.e14275df.js"><link rel="prefetch" href="/learn-vue/assets/js/4.df64d724.js"><link rel="prefetch" href="/learn-vue/assets/js/40.c26a799c.js"><link rel="prefetch" href="/learn-vue/assets/js/41.61d48bd7.js"><link rel="prefetch" href="/learn-vue/assets/js/42.96f28a39.js"><link rel="prefetch" href="/learn-vue/assets/js/43.958bab80.js"><link rel="prefetch" href="/learn-vue/assets/js/44.24ea3b18.js"><link rel="prefetch" href="/learn-vue/assets/js/45.946756a0.js"><link rel="prefetch" href="/learn-vue/assets/js/46.ecff4378.js"><link rel="prefetch" href="/learn-vue/assets/js/5.adf7d4ce.js"><link rel="prefetch" href="/learn-vue/assets/js/6.da83f4a7.js"><link rel="prefetch" href="/learn-vue/assets/js/7.9cfbc2da.js"><link rel="prefetch" href="/learn-vue/assets/js/8.81755cb9.js"><link rel="prefetch" href="/learn-vue/assets/js/9.068575f9.js">
+    <link rel="stylesheet" href="/learn-vue/assets/css/0.styles.e071bbb8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>learn-vue</h3> <p class="description" data-v-59e6cb88>learn-vue</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-vue/" class="home-link router-link-active"><!----> <span class="site-name">learn-vue</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link router-link-active"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/data-types/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>33</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link router-link-active"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/data-types/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-vue/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/javascript" class="sidebar-heading clickable"><span>Javascript</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/javascript/es6/" class="sidebar-link">es6</a></li><li><a href="/learn-vue/javascript/inheritance/" class="sidebar-link">继承</a></li><li><a href="/learn-vue/javascript/array/" class="sidebar-link">数组常用方法</a></li><li><a href="/learn-vue/javascript/string/" class="sidebar-link">字符串常用方法</a></li><li><a href="/learn-vue/javascript/regular-expression/" class="sidebar-link">正则表达式</a></li><li><a href="/learn-vue/javascript/data-structure/" class="sidebar-link">JavaScript中的常见数据结构</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/uni-app" class="sidebar-heading clickable"><span>uni-app</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/uni-app/performance/" class="sidebar-link">性能优化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/web3d" class="sidebar-heading clickable"><span>Web3D</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/web3d/threeJS/" class="sidebar-link">three.js</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/vue" class="sidebar-heading clickable"><span>vue生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/vue/composition-api/" class="sidebar-link">Composition API</a></li><li><a href="/learn-vue/vue/vite/" class="sidebar-link">vite基本配置</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/react" class="sidebar-heading clickable"><span>react生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/react/function-component/" class="sidebar-link">函数式组件</a></li><li><a href="/learn-vue/react/class-component/" class="sidebar-link">类组件</a></li><li><a href="/learn-vue/react/router/" class="sidebar-link">router</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/program" class="sidebar-heading clickable"><span>框架和组件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/program/route/" class="sidebar-link">路由</a></li><li><a href="/learn-vue/program/lifecycle/" class="sidebar-link">生命周期</a></li><li><a href="/learn-vue/program/network/" class="sidebar-link">网络</a></li><li><a href="/learn-vue/program/event/" class="sidebar-link">事件系统</a></li><li><a href="/learn-vue/program/component/" class="sidebar-link">自定义组件</a></li><li><a href="/learn-vue/program/storage/" class="sidebar-link">数据存储</a></li><li><a href="/learn-vue/program/api/media/image/" class="sidebar-link">图片</a></li><li><a href="/learn-vue/program/api/media/audio/" class="sidebar-link">音频</a></li><li><a href="/learn-vue/program/api/media/video/" class="sidebar-link">视频</a></li><li><a href="/learn-vue/program/api/payment/" class="sidebar-link">支付</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/typescript" class="sidebar-heading clickable router-link-active open"><span>TS中的数据类型</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/typescript/data-types/" aria-current="page" class="active sidebar-link">新增的数据类型</a></li><li><a href="/learn-vue/typescript/interface/" class="sidebar-link">接口</a></li><li><a href="/learn-vue/typescript/T/" class="sidebar-link">泛型</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">1.元组</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="_1-元组"><a href="#_1-元组" class="header-anchor">#</a> 1.元组</h2> <ul><li>元祖类型 Tuple</li> <li>TS中的元祖类型其实就是数组类型的扩展</li> <li>元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同</li></ul> <div class="language- extra-class"><pre class="language-text"><code>export default {}
+
+// 元祖类型 Tuple
+// TS中的元祖类型其实就是数组类型的扩展
+// 元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同
+
+// 表示定义了一个名称叫做 tup1 的元祖, 这个元祖中将来可以存储3个元素, 
+// 第一个元素必须是字符串类型, 第二个元素必须是数字类型, 第三个元素必须是布尔类型
+let tup1:[string, number, boolean]; 
+tup1 = ['宋祖儿', 100, false];
+// tup1 = ['宋祖儿', 100, true, 200]; // 超过指定的长度会报错
+// tup1 = [100,&quot;宋祖儿&quot;, true];
+// tup1 = ['杨超越', 100, true];
+console.log(tup1); 
+
+/* 
+  总结:
+  定义: ['', '', ...]
+  作用:元祖用于保存定长定数据类型的数据
+*/
+</code></pre></div><h2 id="_2-any与void"><a href="#_2-any与void" class="header-anchor">#</a> 2.any与void</h2> <ul><li><p>any:  表示任意类型, 当我们不清楚某个值的具体类型的时候我们就可以使用any</p></li> <li><p>void:  当一个函数没有返回值时，你通常会见到其返回值类型是 void</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>export default {}
+
+// any类型
+// any表示任意类型, 当我们不清楚某个值的具体类型的时候我们就可以使用any
+// 在TS中任何数据类型的值都可以负责给any类型
+
+// 使用场景一
+// 变量的值会动态改变时，比如来自用户的输入，任意值类型可以让这些变量跳过编译阶段的类型检查
+let salary: any = 1800;    // 数字类型
+salary = 'my salary is 18k';    // 字符串类型
+salary = false;    // 布尔类型
+
+// 使用场景二
+// 改写现有代码时，任意值允许在编译时可选择地包含或移除类型检查
+let x: any = 4;
+x.ifItExists();    // 正确，ifItExists方法在运行时可能存在，但这里并不会检查
+x.toFixed();    // 正确 
+
+// 使用场景三
+// 定义存储各种类型数据的数组时
+let beautyList: any[] = [1, false, 'fine'];
+beautyList[1] = 100;
+
+
+
+// void类型
+// 某种程度上来说，void类型像是与any类型相反，它表示没有任何类型。 
+// 当一个函数没有返回值时，你通常会见到其返回值类型是 void
+// 在TS中只有null和undefined可以赋值给void类型
+function makeMoney(): void {
+  console.log(&quot;I want to make much money and marry a wife!!!&quot;);
+  // return &quot;100K beauty&quot; // 报错
+}
+
+makeMoney()
+
+let value:void; 
+// 定义了一个不可以保存任意类型数据的变量, 只能保存null和undefined
+// value = 100; // 报错
+// value = &quot;杨紫&quot;;// 报错
+// value = true;// 报错
+// 注意点: null和undefined是所有类型的子类型, 所以我们可以将null和undefined赋值给任意类型
+// 严格模式下会null报错
+// value = null; // 不会报错  
+value = undefined;// 不会报错
+</code></pre></div><h2 id="_3-never与object"><a href="#_3-never与object" class="header-anchor">#</a> 3.never与object</h2> <blockquote><p><strong>never类型</strong>:</p> <p>表示的是那些永不存在的值的类型;</p> <p>never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型;</p> <p>变量也可能是 never类型，当它们被永不为真的类型保护所约束</p></blockquote> <blockquote><p><strong>object类型</strong>：</p> <p><code>object</code>表示非原始类型，也就是除<code>number</code>，<code>string</code>，<code>boolean</code>，<code>symbol</code>，<code>null</code>或<code>undefined</code>之外的类型</p> <p>定义了一个只能保存对象的变量</p> <p>我们后面更常用的是 <code>接口</code> 与 <code>类型别名</code></p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// Never类型
+// never类型表示的是那些永不存在的值的类型
+// 例如: never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型
+//      变量也可能是 never类型，当它们被永不为真的类型保护所约束时。
+
+// 注意点:never类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是never的子类型或可以赋值给never类型（除了never本身之外）。
+//  即使 any也不可以赋值给never
+
+// 返回never的函数必须存在无法达到的终点
+function error(message: string): never {
+  throw new Error(message);
+}
+
+error(&quot;鞠婧祎&quot;);
+
+// 推断的返回值类型为never
+function fail() {
+  return error(&quot;Something failed&quot;);
+}
+
+// 返回never的函数必须存在无法达到的终点
+function infiniteLoop(): never {
+  while (true) {
+  }
+}
+
+
+// Object类型
+// 表示一个对象
+// 定义了一个只能保存对象的变量
+let goddess:object; 
+// goddess = 1;
+// goddess = &quot;123&quot;;
+// goddess = true;
+goddess = {name:'白鹿', age:27};
+console.log(goddess);
+</code></pre></div><h2 id="_4-枚举enum"><a href="#_4-枚举enum" class="header-anchor">#</a> 4.枚举enum</h2> <ul><li><code>enum</code>类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 枚举用于表示固定的几个取值
+// 例如: 人的性别只能是男或者女
+
+enum Gender{ 
+  Male,
+  Femal
+}
+
+// 定义了一个名称叫做val的变量, 这个变量中只能保存Male或者Femal
+let val:Gender; 
+val = Gender.Male;
+val = Gender.Femal;
+// val = 'nan'; // 报错
+// val  = false;// 报错
+
+
+// 注意点: TS中的枚举底层实现的本质其实就是数值类型, 所以赋值一个数值不会报错
+val = 666; // 不会报错
+console.log(Gender.Male); // 0
+console.log(Gender.Femal);// 1
+
+// 注意点: TS中的枚举类型的取值, 默认是从上至下从0开始递增的
+//         虽然默认是从0开始递增的, 但是我们也可以手动的指定枚举的取值的值
+// 注意点: 如果手动指定了前面枚举值的取值, 那么后面枚举值的取值会根据前面的值来递增
+enum Gender2{ 
+  Male=5,
+  Femal
+}
+console.log(Gender2.Male); // 5
+console.log(Gender2.Femal);// 6
+
+// 注意点: 如果手动指定了后面枚举值的取值, 那么前面枚举值的取值不会受到影响
+enum Gender3{ 
+  Male,
+  Femal=10
+}
+console.log(Gender3.Male); // 0
+console.log(Gender3.Femal);// 10
+
+// 注意点: 我们还可以同时修改多个枚举值的取值, 如果同时修改了多个, 那么修改的是什么最后就是什么
+enum Gender4{ 
+  Male=100,
+  Femal=200
+}
+console.log(Gender4.Male); // 100
+console.log(Gender4.Femal);// 200
+
+// 我们可以通过枚举值拿到它对应的数字
+console.log(Gender.Male); // 0
+// 我们还可以通过它对应的数据拿到它的枚举值
+console.log(Gender[0]); // Male
+
+</code></pre></div><h2 id="_4-unknown类型"><a href="#_4-unknown类型" class="header-anchor">#</a> 4.unknown类型</h2> <ul><li>unknown 类型代表任何值。这与 any 类型类似，但更安全，因为对未知 unknown 值做任何事情都是不合法的。</li> <li>unknown 类型被称作安全的any</li></ul> <div class="language- extra-class"><pre class="language-text"><code>export default {}
+
+// unknown 类型代表任何值。这与 any 类型类似，但更安全，因为对未知 unknown 值做任何事情都是不合法的。
+// unknown 类型被称作安全的any
+
+// 1.任何类型都可以赋值给unknown类型
+let str:unknown;
+str = 18;
+str = &quot;张馨予&quot;;
+str = false;
+
+// 2.不能将unknown类型赋值给其它类型
+let val:unknown = 18;
+let num: number;
+// num = val; // 报错
+// 使用类型断言
+num = val as number;
+// 使用类型缩小
+if(typeof val == &quot;number&quot;) {
+  num = val;
+}
+
+// 3.unknown与其它任何类型组成的交叉类型最后都是其它类型
+type MyType1 = number &amp; unknown;
+type MyType2 = unknown &amp; boolean;
+let a:MyType1 = 18;
+let b:MyType2 = true;
+
+
+// 4.unknown除了与any以外, 与其它任何类型组成的联合类型最后都是unknown类型
+type MyType3 = unknown | any;
+type MyType4 = unknown | number;
+type MyType5 = unknown | string | boolean;
+
+
+// 5.never类型是unknown类型的子类型
+type MyType6 = never extends unknown ? true : false;
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/learn-vue/program/api/payment/" class="prev">
+          支付
+        </a></span> <span class="next"><a href="/learn-vue/typescript/interface/">
+          接口
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/learn-vue/typescript/data-types/#_1-元组" class="sidebar-link reco-side-_1-元组" data-v-b57cc07c>1.元组</a></li><li class="level-2" data-v-b57cc07c><a href="/learn-vue/typescript/data-types/#_2-any与void" class="sidebar-link reco-side-_2-any与void" data-v-b57cc07c>2.any与void</a></li><li class="level-2" data-v-b57cc07c><a href="/learn-vue/typescript/data-types/#_3-never与object" class="sidebar-link reco-side-_3-never与object" data-v-b57cc07c>3.never与object</a></li><li class="level-2" data-v-b57cc07c><a href="/learn-vue/typescript/data-types/#_4-枚举enum" class="sidebar-link reco-side-_4-枚举enum" data-v-b57cc07c>4.枚举enum</a></li><li class="level-2" data-v-b57cc07c><a href="/learn-vue/typescript/data-types/#_4-unknown类型" class="sidebar-link reco-side-_4-unknown类型" data-v-b57cc07c>4.unknown类型</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/learn-vue/assets/js/app.d16f716d.js" defer></script><script src="/learn-vue/assets/js/3.dfda982a.js" defer></script><script src="/learn-vue/assets/js/1.f474e8b5.js" defer></script><script src="/learn-vue/assets/js/37.6df41011.js" defer></script>
+  </body>
+</html>

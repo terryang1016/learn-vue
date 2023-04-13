@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Function Component | learn-vue</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="learn-vue">
+    
+    <link rel="preload" href="/learn-vue/assets/css/0.styles.e071bbb8.css" as="style"><link rel="preload" href="/learn-vue/assets/js/app.d16f716d.js" as="script"><link rel="preload" href="/learn-vue/assets/js/3.dfda982a.js" as="script"><link rel="preload" href="/learn-vue/assets/js/1.f474e8b5.js" as="script"><link rel="preload" href="/learn-vue/assets/js/33.cfbb96af.js" as="script"><link rel="prefetch" href="/learn-vue/assets/js/10.e3101ac7.js"><link rel="prefetch" href="/learn-vue/assets/js/11.92716ba8.js"><link rel="prefetch" href="/learn-vue/assets/js/12.43d2afd3.js"><link rel="prefetch" href="/learn-vue/assets/js/13.03bff369.js"><link rel="prefetch" href="/learn-vue/assets/js/14.92df3b15.js"><link rel="prefetch" href="/learn-vue/assets/js/15.f898392d.js"><link rel="prefetch" href="/learn-vue/assets/js/16.477613d8.js"><link rel="prefetch" href="/learn-vue/assets/js/17.2901f31d.js"><link rel="prefetch" href="/learn-vue/assets/js/18.703312b8.js"><link rel="prefetch" href="/learn-vue/assets/js/19.d1c9033f.js"><link rel="prefetch" href="/learn-vue/assets/js/20.032f92fd.js"><link rel="prefetch" href="/learn-vue/assets/js/21.2f22cf78.js"><link rel="prefetch" href="/learn-vue/assets/js/22.240ba8b9.js"><link rel="prefetch" href="/learn-vue/assets/js/23.e6bbb092.js"><link rel="prefetch" href="/learn-vue/assets/js/24.4755d6d9.js"><link rel="prefetch" href="/learn-vue/assets/js/25.50473ca9.js"><link rel="prefetch" href="/learn-vue/assets/js/26.a495b306.js"><link rel="prefetch" href="/learn-vue/assets/js/27.d370af2d.js"><link rel="prefetch" href="/learn-vue/assets/js/28.03687596.js"><link rel="prefetch" href="/learn-vue/assets/js/29.42de594e.js"><link rel="prefetch" href="/learn-vue/assets/js/30.57d04a5d.js"><link rel="prefetch" href="/learn-vue/assets/js/31.d8a0e646.js"><link rel="prefetch" href="/learn-vue/assets/js/32.a4e20547.js"><link rel="prefetch" href="/learn-vue/assets/js/34.2ca1a839.js"><link rel="prefetch" href="/learn-vue/assets/js/35.8d72967d.js"><link rel="prefetch" href="/learn-vue/assets/js/36.e2d911a5.js"><link rel="prefetch" href="/learn-vue/assets/js/37.6df41011.js"><link rel="prefetch" href="/learn-vue/assets/js/38.d34f3d70.js"><link rel="prefetch" href="/learn-vue/assets/js/39.e14275df.js"><link rel="prefetch" href="/learn-vue/assets/js/4.df64d724.js"><link rel="prefetch" href="/learn-vue/assets/js/40.c26a799c.js"><link rel="prefetch" href="/learn-vue/assets/js/41.61d48bd7.js"><link rel="prefetch" href="/learn-vue/assets/js/42.96f28a39.js"><link rel="prefetch" href="/learn-vue/assets/js/43.958bab80.js"><link rel="prefetch" href="/learn-vue/assets/js/44.24ea3b18.js"><link rel="prefetch" href="/learn-vue/assets/js/45.946756a0.js"><link rel="prefetch" href="/learn-vue/assets/js/46.ecff4378.js"><link rel="prefetch" href="/learn-vue/assets/js/5.adf7d4ce.js"><link rel="prefetch" href="/learn-vue/assets/js/6.da83f4a7.js"><link rel="prefetch" href="/learn-vue/assets/js/7.9cfbc2da.js"><link rel="prefetch" href="/learn-vue/assets/js/8.81755cb9.js"><link rel="prefetch" href="/learn-vue/assets/js/9.068575f9.js">
+    <link rel="stylesheet" href="/learn-vue/assets/css/0.styles.e071bbb8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>learn-vue</h3> <p class="description" data-v-59e6cb88>learn-vue</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-vue/" class="home-link router-link-active"><!----> <span class="site-name">learn-vue</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link router-link-active"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/react/function-component/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>33</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link router-link-active"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/react/function-component/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-vue/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/javascript" class="sidebar-heading clickable"><span>Javascript</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/javascript/es6/" class="sidebar-link">es6</a></li><li><a href="/learn-vue/javascript/inheritance/" class="sidebar-link">继承</a></li><li><a href="/learn-vue/javascript/array/" class="sidebar-link">数组常用方法</a></li><li><a href="/learn-vue/javascript/string/" class="sidebar-link">字符串常用方法</a></li><li><a href="/learn-vue/javascript/regular-expression/" class="sidebar-link">正则表达式</a></li><li><a href="/learn-vue/javascript/data-structure/" class="sidebar-link">JavaScript中的常见数据结构</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/uni-app" class="sidebar-heading clickable"><span>uni-app</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/uni-app/performance/" class="sidebar-link">性能优化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/web3d" class="sidebar-heading clickable"><span>Web3D</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/web3d/threeJS/" class="sidebar-link">three.js</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/vue" class="sidebar-heading clickable"><span>vue生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/vue/composition-api/" class="sidebar-link">Composition API</a></li><li><a href="/learn-vue/vue/vite/" class="sidebar-link">vite基本配置</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/react" class="sidebar-heading clickable router-link-active open"><span>react生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/react/function-component/" aria-current="page" class="active sidebar-link">函数式组件</a></li><li><a href="/learn-vue/react/class-component/" class="sidebar-link">类组件</a></li><li><a href="/learn-vue/react/router/" class="sidebar-link">router</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/program" class="sidebar-heading clickable"><span>框架和组件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/program/route/" class="sidebar-link">路由</a></li><li><a href="/learn-vue/program/lifecycle/" class="sidebar-link">生命周期</a></li><li><a href="/learn-vue/program/network/" class="sidebar-link">网络</a></li><li><a href="/learn-vue/program/event/" class="sidebar-link">事件系统</a></li><li><a href="/learn-vue/program/component/" class="sidebar-link">自定义组件</a></li><li><a href="/learn-vue/program/storage/" class="sidebar-link">数据存储</a></li><li><a href="/learn-vue/program/api/media/image/" class="sidebar-link">图片</a></li><li><a href="/learn-vue/program/api/media/audio/" class="sidebar-link">音频</a></li><li><a href="/learn-vue/program/api/media/video/" class="sidebar-link">视频</a></li><li><a href="/learn-vue/program/api/payment/" class="sidebar-link">支付</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/typescript" class="sidebar-heading clickable"><span>TS中的数据类型</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/typescript/data-types/" class="sidebar-link">新增的数据类型</a></li><li><a href="/learn-vue/typescript/interface/" class="sidebar-link">接口</a></li><li><a href="/learn-vue/typescript/T/" class="sidebar-link">泛型</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Function Component</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="function-component"><a href="#function-component" class="header-anchor">#</a> Function Component</h2> <h2 id="钩子函数的使用注意事项"><a href="#钩子函数的使用注意事项" class="header-anchor">#</a> 钩子函数的使用注意事项：</h2> <ol><li>钩子只能在React组件和自定义钩子中使用</li> <li>钩子不能在嵌套函数或其他语句（if、switch、white、for等）中使用</li></ol> <h3 id="_1-useeffect"><a href="#_1-useeffect" class="header-anchor">#</a> 1.useEffect</h3> <p>useEffect语法：</p> <div class="language- extra-class"><pre class="language-text"><code>useEffect(didUpdate);
+</code></pre></div><p><code>useEffect()</code>需要一个函数作为参数，你可以这样写：</p> <div class="language- extra-class"><pre class="language-text"><code>useEffect(()=&gt;{
+    /* 编写那些会产生副作用的代码 */
+});
+</code></pre></div><p><code>useEffect()</code>中的回调函数会在组件每次渲染完毕之后执行，这也是它和写在函数体中代码的最大的不同，函数体中的代码会在组件渲染前执行，而<code>useEffect()</code>中的代码是在组件渲染后才执行，这就避免了代码的执行影响到组件渲染。</p> <p><img src="F:%5Cweb-react%5CuseEffect%E7%9A%84%E5%9B%9B%E7%A7%8D%E6%83%85%E5%86%B5.png" alt=""></p> <h3 id="_2-usememo"><a href="#_2-usememo" class="header-anchor">#</a> 2.useMemo</h3> <p>useMemo和useCallback十分相似，<strong>useCallback用来缓存函数对象</strong>，<strong>useMemo用来缓存函数的执行结果</strong>。在组件中，会有一些函数具有十分的复杂的逻辑，执行速度比较慢。闭了避免这些执行速度慢的函数返回执行，可以通过useMemo来缓存它们的执行结果，像是这样：</p> <div class="language- extra-class"><pre class="language-text"><code>const result = useMemo(()=&gt;{
+    return 复杂逻辑函数();
+},[依赖项])
+</code></pre></div><p><strong>useMemo中的函数会在依赖项发生变化时执行</strong>，注意！是执行，这点和useCallback不同，useCallback是创建。执行后返回执行结果，如果依赖项不发生变化，则一直会返回上次的结果，不会再执行函数。这样一来就避免复杂逻辑的重复执行。</p> <h3 id="_3-usecallback"><a href="#_3-usecallback" class="header-anchor">#</a> 3.useCallback</h3> <h5 id="usecallback的作用其实是用来避免子组件不必要的rerender"><a href="#usecallback的作用其实是用来避免子组件不必要的rerender" class="header-anchor">#</a> <code>useCallback</code>的作用其实是用来避免子组件不必要的reRender</h5> <p>useCallBack在什么情况下使用？</p> <p><strong>在往子组件传入了一个函数并且子组件被React.momo缓存了的时候使用</strong></p> <hr> <p>useCallBack的作用不是阻止函数创建，而是在依赖不变的情况下返回旧函数地址（保持地址不变）。</p> <p>React.memo()是通过校验props中的数据是否改变的来决定组件是否需要重新渲染的一种缓存技术，<strong>具体点说React.memo()其实是通过校验Props中的数据的内存地址是否改变来决定组件是否重新渲染组件的一种技术。</strong></p> <h4 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h4> <ul><li><strong>useCallBack不要每个函数都包一下，否则就会变成反向优化，useCallBack本身就是需要一定性能的</strong></li> <li><strong>useCallBack并不能阻止函数重新创建,它只能通过依赖决定返回新的函数还是旧的函数,从而在依赖不变的情况下保证函数地址不变</strong></li> <li><strong>useCallBack需要配合React.memo使用</strong></li></ul> <h3 id="_4-useref"><a href="#_4-useref" class="header-anchor">#</a> 4.useRef</h3> <p>useRef()返回的是一个普通的JS对象，JS对象中有一个current属性，它指向的便是原生的DOM对象。上例中，如果想访问div的原生DOM对象，只需通过<code>divRef.current</code>即可访问，它可以调用DOM对象的各种方法和属性，但还是要再次强调：慎用！</p> <p><strong>尽量减少在React中操作原生的DOM对象</strong>，如果实在非得操作也尽量是那些不会对数据产生影响的操作，像是设置焦点、读取信息等。</p> <div class="language- extra-class"><pre class="language-text"><code>import React, {useRef} from 'react';
+
+const MyComponent = () =&gt; {
+
+    const divRef = useRef();
+
+    const clickHandler = () =&gt; {
+        console.log(divRef);
+    };
+
+    return (
+            &lt;div ref={divRef} onClick={clickHandler}&gt;一个div&lt;/div&gt;
+           
+    );
+};
+
+export default MyComponent;
+</code></pre></div><h3 id="_5-usereducer"><a href="#_5-usereducer" class="header-anchor">#</a> 5.useReducer</h3> <p><code>Reducer</code>可以翻译为“整合器”，它的作用就是<strong>将那些和同一个<code>state</code>相关的所有函数都整合到一起，方便在组件中进行调用</strong>。</p> <p><strong>使用场景</strong>：只适用于那些比较复杂的<code>state</code>，对于简单的<code>state</code>使用<code>Reducer</code>只能是徒增烦恼。</p> <p>**语法如下：**和<code>State</code>相同<code>Reducer</code>也是一个钩子函数，</p> <div class="language- extra-class"><pre class="language-text"><code>const [state, dispatch] = useReducer(reducer, initialArg, init);
+</code></pre></div><p>它的返回值和<code>useState()</code>类似，第一个参数是<code>state</code>用来读取<code>state</code>的值，第二个参数同样是一个函数，不同于<code>setState()</code>这个函数我们可以称它是一个“派发器”，通过它可以向<code>reducer()</code>发送不同的指令，控制<code>reducer()</code>做不同的操作。</p> <p>它的参数有三个，第三个我们暂且忽略，只看前两个。<code>reducer()</code>是一个函数，也是我们所谓的“整合器”。它的返回值会成为新的<code>state</code>值。当我们调用<code>dispatch()</code>时，<code>dispatch()</code>会将消息发送给<code>reducer()</code>，<code>reducer()</code>可以根据不同的消息对<code>state</code>进行不同的处理。<code>initialArg</code>就是<code>state</code>的初始值，和<code>useState()</code>参数一样。</p> <div class="language- extra-class"><pre class="language-text"><code>import {useReducer, useState} from 'react';
+
+const reducer = (state, action) =&gt; {
+    switch(action.type){
+        case 'add':
+            return state + 1;
+        case 'sub':
+            return state - 1;
+    }
+};
+
+function App() {
+
+    const [count, countDispath] = useReducer(reducer,1);
+
+    return (
+        &lt;div className=&quot;App&quot;&gt;
+            {count}
+
+            &lt;div&gt;
+                &lt;button onClick={()=&gt;countDispath({type:'sub'})}&gt;-&lt;/button&gt;
+                &lt;button onClick={()=&gt;countDispath({type:'add'})}&gt;+&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default App;
+</code></pre></div><h3 id="_6-usecontext"><a href="#_6-usecontext" class="header-anchor">#</a> 6.useContext</h3> <h5 id="usecontext作用"><a href="#usecontext作用" class="header-anchor">#</a> <strong>useContext作用</strong></h5> <h5 id="a-usecontext可以帮助我们跨越组件层级直接传递变量-实现数据共享。"><a href="#a-usecontext可以帮助我们跨越组件层级直接传递变量-实现数据共享。" class="header-anchor">#</a> a.useContext可以帮助我们跨越组件层级直接传递变量，实现数据共享。</h5> <h5 id="b-context的作用就是对它所包含的组件树提供全局共享数据的一种技术。"><a href="#b-context的作用就是对它所包含的组件树提供全局共享数据的一种技术。" class="header-anchor">#</a> b.Context的作用就是对它所包含的组件树提供全局共享数据的一种技术。</h5> <p>代码示例：点击+1的时候，父组件和子组件都能获取到当前点击的次数。</p> <div class="language- extra-class"><pre class="language-text"><code>import React,{useContext, useState, createContext} from 'react';
+import {Button} from 'antd';
+import '../../App.css';
+ 
+const CountContext = createContext();
+ 
+const TestContext = () =&gt;{
+    const [count, setCount] = useState(0);
+    console.log(CountContext);
+    console.log(useContext(CountContext));
+    return(
+      &lt;div&gt;
+          &lt;p&gt;父组件点击次数：{count}&lt;/p&gt;
+          &lt;Button type={&quot;primary&quot;} onClick={()=&gt;setCount(count+1)}&gt;点击+1&lt;/Button&gt;
+          &lt;CountContext.Provider value={count}&gt;
+            &lt;Counter/&gt;
+          &lt;/CountContext.Provider&gt;
+      &lt;/div&gt;
+  )
+};
+ 
+const Counter = () =&gt; {
+    const count = useContext(CountContext);
+    console.log(CountContext);
+    // console.log(count);
+    // console.log(useContext(CountContext));
+    return (
+        &lt;div&gt;
+            &lt;p&gt;子组件获得的点击数量：{count}&lt;/p&gt;
+        &lt;/div&gt;
+    );
+};
+ 
+export default TestContext;
+</code></pre></div><p>Provider译为生产者，和Consumer消费者对应。Provider会设置在外层组件中，通过value属性来指定Context的值。这个Context值在所有的Provider子组件中都可以访问。Context的搜索流程和JS中函数作用域类似，当我们获取Context时，React会在它的外层查找最近的Provider，然后返回它的Context值。如果没有找到Provider，则会返回Context模块中设置的默认值。</p> <h3 id="_7-useimperativehandle"><a href="#_7-useimperativehandle" class="header-anchor">#</a> 7.useImperativeHandle</h3> <p>在React中可以通过forwardRef来指定要暴露给外部组件的ref：</p> <div class="language- extra-class"><pre class="language-text"><code>const MyButton = forwardRef((props, ref) =&gt; {
+    return &lt;button ref={ref}&gt;自定义按钮&lt;/button&gt;
+});
+</code></pre></div><p>上例中，MyButton组件将button的ref作为组件的ref向外部暴露，其他组件在使用MyButton时，就可以通过ref属性访问：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;MyButton ref={btnRef}/&gt;
+</code></pre></div><p><strong>通过useImperativeHandle可以手动的指定ref要暴露的对象</strong>，比如可以修改MyButton组件如下：</p> <div class="language- extra-class"><pre class="language-text"><code>const MyButton = forwardRef((props, ref) =&gt; {
+
+    useImperativeHandle(ref,()=&gt; {
+        return {
+            name:'孙悟空'
+        };
+    });
+
+    return &lt;button&gt;自定义按钮&lt;/button&gt;
+});
+</code></pre></div><p>useImperativeHandle的第二个参数是一个函数，函数的返回值会自动赋值给ref（current属性）。上例中，我们将返回值为<code>{name:'孙悟空'}</code>，当然返回孙悟空没有什么意义。实际开发中，我们可以将一些操作方法定义到对象中，这样可以有效的减少组件对DOM对象的直接操作。</p> <div class="language- extra-class"><pre class="language-text"><code>const MyButton = forwardRef((props, ref) =&gt; {
+
+    const btnRef = useRef();
+
+    useImperativeHandle(ref,()=&gt; {
+        return {
+            setDisabled(){
+                btnRef.current.disabled = true;
+            }
+        };
+    });
+
+    return &lt;button ref={btnRef}&gt;自定义按钮&lt;/button&gt;
+});
+
+const App = () =&gt; {
+    
+    const btnRef = useRef();
+
+    const clickHandler = () =&gt; {
+        btnRef.current.setDisabled();
+    };
+
+    return &lt;div&gt;
+        &lt;MyButton ref={btnRef}/&gt;
+        &lt;button onClick={clickHandler}&gt;点击&lt;/button&gt;
+    &lt;/div&gt;;
+};
+</code></pre></div><h3 id="_8-uselayouteffect"><a href="#_8-uselayouteffect" class="header-anchor">#</a> 8.useLayoutEffect</h3> <p>useLayoutEffect的方法签名和useEffect一样，功能也类似。</p> <p>不同点在于，<strong>useLayoutEffect的执行时机要早于useEffect</strong>，它会<strong>在DOM改变后调用</strong>。在老版本的React中它和useEffect的区别比较好演示，React18中，useEffect的运行方式有所变化，所以二者区别不好演示。</p> <p>useLayoutEffect<strong>使用场景</strong>不多，实际开发中，在effect中需要修改元素样式，且使用useEffect会出现闪烁现象时可以使用useLayoutEffect进行替换。</p> <p><img src="F:%5Cweb-react%5C%E4%B8%89%E4%B8%AAeffect%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA%E4%B8%8D%E5%90%8C.png" alt=""></p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/learn-vue/vue/vite/" class="prev">
+          vite基本配置
+        </a></span> <span class="next"><a href="/learn-vue/react/class-component/">
+          类组件
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/learn-vue/react/function-component/#function-component" class="sidebar-link reco-side-function-component" data-v-b57cc07c>Function Component</a></li><li class="level-2" data-v-b57cc07c><a href="/learn-vue/react/function-component/#钩子函数的使用注意事项" class="sidebar-link reco-side-钩子函数的使用注意事项" data-v-b57cc07c>钩子函数的使用注意事项：</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_1-useeffect" class="sidebar-link reco-side-_1-useeffect" data-v-b57cc07c>1.useEffect</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_2-usememo" class="sidebar-link reco-side-_2-usememo" data-v-b57cc07c>2.useMemo</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_3-usecallback" class="sidebar-link reco-side-_3-usecallback" data-v-b57cc07c>3.useCallback</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_4-useref" class="sidebar-link reco-side-_4-useref" data-v-b57cc07c>4.useRef</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_5-usereducer" class="sidebar-link reco-side-_5-usereducer" data-v-b57cc07c>5.useReducer</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_6-usecontext" class="sidebar-link reco-side-_6-usecontext" data-v-b57cc07c>6.useContext</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_7-useimperativehandle" class="sidebar-link reco-side-_7-useimperativehandle" data-v-b57cc07c>7.useImperativeHandle</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/react/function-component/#_8-uselayouteffect" class="sidebar-link reco-side-_8-uselayouteffect" data-v-b57cc07c>8.useLayoutEffect</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/learn-vue/assets/js/app.d16f716d.js" defer></script><script src="/learn-vue/assets/js/3.dfda982a.js" defer></script><script src="/learn-vue/assets/js/1.f474e8b5.js" defer></script><script src="/learn-vue/assets/js/33.cfbb96af.js" defer></script>
+  </body>
+</html>

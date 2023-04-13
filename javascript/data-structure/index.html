@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.Queue 队列 | learn-vue</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="learn-vue">
+    
+    <link rel="preload" href="/learn-vue/assets/css/0.styles.e071bbb8.css" as="style"><link rel="preload" href="/learn-vue/assets/js/app.d16f716d.js" as="script"><link rel="preload" href="/learn-vue/assets/js/3.dfda982a.js" as="script"><link rel="preload" href="/learn-vue/assets/js/1.f474e8b5.js" as="script"><link rel="preload" href="/learn-vue/assets/js/13.03bff369.js" as="script"><link rel="prefetch" href="/learn-vue/assets/js/10.e3101ac7.js"><link rel="prefetch" href="/learn-vue/assets/js/11.92716ba8.js"><link rel="prefetch" href="/learn-vue/assets/js/12.43d2afd3.js"><link rel="prefetch" href="/learn-vue/assets/js/14.92df3b15.js"><link rel="prefetch" href="/learn-vue/assets/js/15.f898392d.js"><link rel="prefetch" href="/learn-vue/assets/js/16.477613d8.js"><link rel="prefetch" href="/learn-vue/assets/js/17.2901f31d.js"><link rel="prefetch" href="/learn-vue/assets/js/18.703312b8.js"><link rel="prefetch" href="/learn-vue/assets/js/19.d1c9033f.js"><link rel="prefetch" href="/learn-vue/assets/js/20.032f92fd.js"><link rel="prefetch" href="/learn-vue/assets/js/21.2f22cf78.js"><link rel="prefetch" href="/learn-vue/assets/js/22.240ba8b9.js"><link rel="prefetch" href="/learn-vue/assets/js/23.e6bbb092.js"><link rel="prefetch" href="/learn-vue/assets/js/24.4755d6d9.js"><link rel="prefetch" href="/learn-vue/assets/js/25.50473ca9.js"><link rel="prefetch" href="/learn-vue/assets/js/26.a495b306.js"><link rel="prefetch" href="/learn-vue/assets/js/27.d370af2d.js"><link rel="prefetch" href="/learn-vue/assets/js/28.03687596.js"><link rel="prefetch" href="/learn-vue/assets/js/29.42de594e.js"><link rel="prefetch" href="/learn-vue/assets/js/30.57d04a5d.js"><link rel="prefetch" href="/learn-vue/assets/js/31.d8a0e646.js"><link rel="prefetch" href="/learn-vue/assets/js/32.a4e20547.js"><link rel="prefetch" href="/learn-vue/assets/js/33.cfbb96af.js"><link rel="prefetch" href="/learn-vue/assets/js/34.2ca1a839.js"><link rel="prefetch" href="/learn-vue/assets/js/35.8d72967d.js"><link rel="prefetch" href="/learn-vue/assets/js/36.e2d911a5.js"><link rel="prefetch" href="/learn-vue/assets/js/37.6df41011.js"><link rel="prefetch" href="/learn-vue/assets/js/38.d34f3d70.js"><link rel="prefetch" href="/learn-vue/assets/js/39.e14275df.js"><link rel="prefetch" href="/learn-vue/assets/js/4.df64d724.js"><link rel="prefetch" href="/learn-vue/assets/js/40.c26a799c.js"><link rel="prefetch" href="/learn-vue/assets/js/41.61d48bd7.js"><link rel="prefetch" href="/learn-vue/assets/js/42.96f28a39.js"><link rel="prefetch" href="/learn-vue/assets/js/43.958bab80.js"><link rel="prefetch" href="/learn-vue/assets/js/44.24ea3b18.js"><link rel="prefetch" href="/learn-vue/assets/js/45.946756a0.js"><link rel="prefetch" href="/learn-vue/assets/js/46.ecff4378.js"><link rel="prefetch" href="/learn-vue/assets/js/5.adf7d4ce.js"><link rel="prefetch" href="/learn-vue/assets/js/6.da83f4a7.js"><link rel="prefetch" href="/learn-vue/assets/js/7.9cfbc2da.js"><link rel="prefetch" href="/learn-vue/assets/js/8.81755cb9.js"><link rel="prefetch" href="/learn-vue/assets/js/9.068575f9.js">
+    <link rel="stylesheet" href="/learn-vue/assets/css/0.styles.e071bbb8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>learn-vue</h3> <p class="description" data-v-59e6cb88>learn-vue</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn-vue/" class="home-link router-link-active"><!----> <span class="site-name">learn-vue</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link router-link-active"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/data-structure/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>33</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/learn-vue/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      js学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/" class="nav-link router-link-active"><i class="undefined"></i>
+  javascript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      vue学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      react学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      typescript学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/typescript/" class="nav-link"><i class="undefined"></i>
+  typescript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      微信小程序学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/program/" class="nav-link"><i class="undefined"></i>
+  框架和组件API
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      uni-app学习笔记
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/learn-vue/uni-app/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Terry Yang的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/terryang1016" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/learn-vue/javascript/data-structure/.html" class="nav-link"><i class="undefined"></i>
+  掘金
+</a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn-vue/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/javascript" class="sidebar-heading clickable router-link-active open"><span>Javascript</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/javascript/es6/" class="sidebar-link">es6</a></li><li><a href="/learn-vue/javascript/inheritance/" class="sidebar-link">继承</a></li><li><a href="/learn-vue/javascript/array/" class="sidebar-link">数组常用方法</a></li><li><a href="/learn-vue/javascript/string/" class="sidebar-link">字符串常用方法</a></li><li><a href="/learn-vue/javascript/regular-expression/" class="sidebar-link">正则表达式</a></li><li><a href="/learn-vue/javascript/data-structure/" aria-current="page" class="active sidebar-link">JavaScript中的常见数据结构</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/uni-app" class="sidebar-heading clickable"><span>uni-app</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/uni-app/performance/" class="sidebar-link">性能优化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/web3d" class="sidebar-heading clickable"><span>Web3D</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/web3d/threeJS/" class="sidebar-link">three.js</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/vue" class="sidebar-heading clickable"><span>vue生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/vue/composition-api/" class="sidebar-link">Composition API</a></li><li><a href="/learn-vue/vue/vite/" class="sidebar-link">vite基本配置</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/react" class="sidebar-heading clickable"><span>react生态圈</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/react/function-component/" class="sidebar-link">函数式组件</a></li><li><a href="/learn-vue/react/class-component/" class="sidebar-link">类组件</a></li><li><a href="/learn-vue/react/router/" class="sidebar-link">router</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/program" class="sidebar-heading clickable"><span>框架和组件</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/program/route/" class="sidebar-link">路由</a></li><li><a href="/learn-vue/program/lifecycle/" class="sidebar-link">生命周期</a></li><li><a href="/learn-vue/program/network/" class="sidebar-link">网络</a></li><li><a href="/learn-vue/program/event/" class="sidebar-link">事件系统</a></li><li><a href="/learn-vue/program/component/" class="sidebar-link">自定义组件</a></li><li><a href="/learn-vue/program/storage/" class="sidebar-link">数据存储</a></li><li><a href="/learn-vue/program/api/media/image/" class="sidebar-link">图片</a></li><li><a href="/learn-vue/program/api/media/audio/" class="sidebar-link">音频</a></li><li><a href="/learn-vue/program/api/media/video/" class="sidebar-link">视频</a></li><li><a href="/learn-vue/program/api/payment/" class="sidebar-link">支付</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn-vue/typescript" class="sidebar-heading clickable"><span>TS中的数据类型</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn-vue/typescript/data-types/" class="sidebar-link">新增的数据类型</a></li><li><a href="/learn-vue/typescript/interface/" class="sidebar-link">接口</a></li><li><a href="/learn-vue/typescript/T/" class="sidebar-link">泛型</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">1.Queue 队列</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h3 id="_1-queue-队列"><a href="#_1-queue-队列" class="header-anchor">#</a> 1.Queue 队列</h3> <p>JavaScript中没有队列这个数据结构，但是可以用数组来实现所有的功能。</p> <p>入队➡</p> <p>​			4 3 2 1</p> <p>​																									出队➡</p> <p>队列是一个<strong>先进先出</strong>的数据结构，一般JavaScript中采用队列解决问题时会用到</p> <p>入队push ()：在数组的尾部添加元素
+出队shift ()：移除数组中第一个元素
+queue (0) ：取数组的第一个元素
+isEmpty ()：确定队列是否为空
+size ()：获取队列中元素的数量</p> <h3 id="_2-stack-栈"><a href="#_2-stack-栈" class="header-anchor">#</a> 2.Stack 栈</h3> <p>1️⃣栈作为一种数据结构，是一种只能在一端进行插入和删除操作的特殊线性表。它按照先进⬇后出⬆的原则存储数据，先进入的数据被压入栈底，最后的数据在栈顶，需要读数据的时候从栈顶开始弹出数据（最后一个数据被第一个读出来）。</p> <p>进栈</p> <p>​													栈顶</p> <p>​					⬇																		⬆</p> <p>2️⃣JavaScript中没有栈，但是可以用Array实现栈的功能。</p> <p>3️⃣栈中数组长度减一即为栈尾元素，也就是最后进入的那个元素，最先出去的那个元素</p> <p>JavaScript中对栈的操作一般会使用到</p> <p>push()方法，将元素压入栈顶
+<strong>pop()方法，从栈顶弹出（删除）元素，并返回该元素</strong> <strong>peek()方法，返回栈顶元素，不删除</strong>
+clear()方法，清空栈
+length拿到栈中元素数量</p> <h3 id="_3-linked-list-链表"><a href="#_3-linked-list-链表" class="header-anchor">#</a> 3.Linked List 链表</h3> <p>链表是由多个元素组成的列表，链表中的元素储存不连续，用<strong>next指针</strong>连接在一起。分为单链表、双链表、循环单链表</p> <p><strong>数组</strong>：增删非数组元素需要移动元素</p> <p><strong>链表</strong>：增删非首尾元素不需要移动元素只需要更改next的指向即可</p> <p>链表是一个链式数据结构，每个节点由两个信息组成：节点的数据和指向下一个节点的指针。链表和传统数组都是线性数据结构，具有序列化的存储方式。</p> <table><thead><tr><th style="text-align:center;">操作</th> <th style="text-align:center;">数组</th> <th style="text-align:center;">链表</th></tr></thead> <tbody><tr><td style="text-align:center;">内存分配</td> <td style="text-align:center;">编译和序列化过程中静态分配</td> <td style="text-align:center;">运行过程中动态分配</td></tr> <tr><td style="text-align:center;">获取元素</td> <td style="text-align:center;">从索引中读取</td> <td style="text-align:center;">读取队列中的所有节点，直到特定元素，较慢</td></tr> <tr><td style="text-align:center;">增加/删除元素</td> <td style="text-align:center;">顺序增加删除，较慢</td> <td style="text-align:center;">动态分配，内存消耗小，速度快</td></tr> <tr><td style="text-align:center;">空间结构</td> <td style="text-align:center;">一维或者多维</td> <td style="text-align:center;">单边/多边，循环链表</td></tr></tbody></table> <p>JavaScript中没有链表，但是可以<strong>用object来模拟链表</strong></p> <div class="language- extra-class"><pre class="language-text"><code>const a = { val: 'a' }
+const b = { val: 'b' }
+const c = { val: 'c' }
+const d = { val: 'd' }
+    // a的next属性指向b
+a.next = b;
+b.next = c;
+c.next = d;
+// 这个嵌套的object就相当于一个链表
+</code></pre></div><h5 id="遍历链表"><a href="#遍历链表" class="header-anchor">#</a> <strong>遍历链表</strong></h5> <p>👉遍历链表就是跟着链表从链表的头元素（head）一直走到尾元素（但是不包含链表的头节点，头通常用来作为链表的接入点）</p> <p>🤦‍♂️还有一个问题，链表的尾元素指向一个null节点</p> <div class="language- extra-class"><pre class="language-text"><code>// 声明一个指针，指向a
+let p = a
+    // 当p还有值得时候
+while (p) {
+    console.log(p.val)
+        // 不断得让p指向下一个位置
+    p = p.next
+}
+</code></pre></div><h5 id="插入链表"><a href="#插入链表" class="header-anchor">#</a> <strong>插入链表</strong></h5> <p><strong>插入链表</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// 在链表中插入值
+const f = { val: 'f' }
+c.next = f
+f.next = d
+</code></pre></div><h5 id="删除链表"><a href="#删除链表" class="header-anchor">#</a> <strong>删除链表</strong></h5> <p><strong>删除链表</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// 删除值
+c.next = d
+</code></pre></div><h3 id="_4、集合"><a href="#_4、集合" class="header-anchor">#</a> 4、集合</h3> <p>集合：一种<strong>无序且唯一的数据结构</strong>，集合区别队列、栈、链表最大的区别就是元素不能重复</p> <p>JavaScript中ES6中新增了集合这种数据结构，可以通过<strong>实例化Set对象</strong>来创建集合const set = <strong>new Set()</strong></p> <h5 id="集合常用来解决的问题"><a href="#集合常用来解决的问题" class="header-anchor">#</a> 集合常用来解决的问题：</h5> <h6 id="去重"><a href="#去重" class="header-anchor">#</a> 去重</h6> <p>set = new Set(arr)，返回一个不含重复元素的集合</p> <h6 id="判断元素是否在集合中"><a href="#判断元素是否在集合中" class="header-anchor">#</a> 判断元素是否在集合中</h6> <p><strong>set.has(num)，判断num是否在集合中</strong></p> <h6 id="求两个集合的交集"><a href="#求两个集合的交集" class="header-anchor">#</a> 求两个集合的交集</h6> <p>先将集合set1转换为数组，然后利用数组中的filter方法将set1在set2中的值返回，最后将返回的值转换为集合</p> <div class="language- extra-class"><pre class="language-text"><code>const set1 = new Set([1,2,4])
+const set2 = new Set([3,4])
+const set3 = new Set([...set1].filter(item = &gt; set2.has(item)))
+//set3{4}
+</code></pre></div><h6 id="求两个集合的并集"><a href="#求两个集合的并集" class="header-anchor">#</a> 求两个集合的并集</h6> <div class="language- extra-class"><pre class="language-text"><code>const set1 = new Set([1,2,4])
+const set2 = new Set([3,4])
+let set3 = new Set([...set1, ...set2]);
+// set3 {1, 2, 3, 4}
+</code></pre></div><h6 id="求两个集合的差集"><a href="#求两个集合的差集" class="header-anchor">#</a> 求两个集合的差集</h6> <div class="language- extra-class"><pre class="language-text"><code>const set1 = new Set([1,2,4])
+const set2 = new Set([3,4])
+let set3 = new Set([...set1].filter(x =&gt; !set2.has(x)));
+// set3 {1,2}
+</code></pre></div><p>filter() 方法创建一个新的数组，新数组返回指定数组中符合条件的所有元素</p> <h3 id="_5-树"><a href="#_5-树" class="header-anchor">#</a> 5.树</h3> <p>前端🎄树结构还是比较常见的，例如级联选择、层级目录等都是树形结构。</p> <p>javascript中没有树这个数据结构，但是一般<strong>用object和arrey来模拟树</strong>。</p> <div class="language- extra-class"><pre class="language-text"><code>const tree = {
+	values:a,
+	children:[
+        {
+            values:b,
+            children:[
+                {
+                    values:d,
+                    children:[]
+                },
+                {
+                    values:e,
+                    children:[]
+                },{
+                 	values:f,
+                    children:[]
+                }
+            ]
+        },
+        {
+            values:c,
+            children:[
+                {
+                    values:g,
+                    children:[]
+                },
+                {
+                    values:h,
+                    children:[]
+                }
+            ]
+        }
+    ]
+}
+
+</code></pre></div><p>上面的代码模拟的就是下图的树结构</p> <p>​												a</p> <p>​							b											c</p> <p>​			d			e			f						g				h</p> <h4 id="树的常用遍历方式"><a href="#树的常用遍历方式" class="header-anchor">#</a> 树的常用遍历方式</h4> <h5 id="深度优先遍历"><a href="#深度优先遍历" class="header-anchor">#</a> 深度优先遍历</h5> <p>尽可能深的遍历树的分支。先访问根节点，然后再对子节点挨个使用深度优先遍历。
+上图中的树使用深度优先遍历</p> <div class="language- extra-class"><pre class="language-text"><code>const deepNood = (node)=&gt;{
+//打印根节点
+    console.log(node.values);
+    //遍历子节点
+    node.children.forEach(child =&gt; {
+    //递归
+        deepNood(child)
+    })
+}
+deepNood(tree)
+//a b d e f c g h
+
+</code></pre></div><h5 id="广度优先遍历"><a href="#广度优先遍历" class="header-anchor">#</a> 广度优先遍历</h5> <p>优先访问距离根节点最近的节点。广度优先遍历需要使用到队列这个数据结构</p> <p>新建一个队列，把根节点入队
+将队头出队并访问
+将队头的children顺序入队
+重复第二步和第三步，直到队列为空
+上面的树使用广度优先遍历</p> <div class="language- extra-class"><pre class="language-text"><code>const breadth = (node)=&gt;{
+//将树加入队列（整个object对象，）
+    const arr = [node];
+//队列是否为空
+    while(arr.length &gt; 0){
+    //从队列中取出根节点
+        const val = arr.shift()
+        console.log(val.values)
+        //遍历子节点
+        for(let child of val.children){
+        //将子节点加入队列
+            arr.push(child)
+        }
+ // 打开console.log(arr),就能看出不断的将childern入队，然后再将队头取出
+    }
+}
+breadth(tree)
+//a b c d e f g h 
+</code></pre></div><h4 id="二叉树"><a href="#二叉树" class="header-anchor">#</a> 二叉树</h4> <p>二叉树是n(n&gt;=0)个结点的有限集合，该集合或者为空集（称为空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树组成</p> <p>树的每个节点最多只能有两个子节点</p> <p>js中自然也没有二叉树这个数据结构，一般还是<strong>用object对象来模拟二叉树</strong></p> <p>二叉树代码实现</p> <div class="language- extra-class"><pre class="language-text"><code>const tree = {
+	val:1,
+    left:{
+            val:2,
+            left:{
+                    val:4,
+                    left:null,
+                    right:null
+                },
+            right:{
+                    val:5,
+                    left:null,
+                    right:null
+            }
+        },
+    right:{
+            val:3,
+            left:{
+                    val:6,
+                    left:null,
+                    right:null
+                },
+            right:
+                {
+                    val:7,
+                    left:null,
+                    right:null
+                }
+        }
+}
+</code></pre></div><h5 id="二叉树遍历-递归"><a href="#二叉树遍历-递归" class="header-anchor">#</a> 二叉树遍历（递归）</h5> <h6 id="_1-前序遍历"><a href="#_1-前序遍历" class="header-anchor">#</a> （1）前序遍历</h6> <p>DLR：根节点——左子树——右子树</p> <p>每次遍历到一个节点都重复一次前序遍历</p> <p>代码实现</p> <div class="language- extra-class"><pre class="language-text"><code>const perorder = (node) =&gt;{
+//如果当前节点值为空则返回
+    if(!node) return;
+    //打印根节点
+    console.log(node.val);
+    //递归左子树
+    perorder(node.left);
+    //递归右子树
+    perorder(node.right);
+}
+perorder(tree)
+//1 2 4 5 3 6 7
+</code></pre></div><h6 id="_2-中序遍历"><a href="#_2-中序遍历" class="header-anchor">#</a> （2）中序遍历</h6> <p>LDR：左子树——根节点——右子树</p> <p>每次遍历到一个节点都重复一次中序遍历</p> <p>代码实现</p> <div class="language- extra-class"><pre class="language-text"><code>const perorder = (node) =&gt;{
+    if(!node)return;
+    perorder(node.left);
+    console.log(node.val);
+    perorder(node.right);
+}
+perorder(tree)
+//4 2 5 1 6 3 7
+</code></pre></div><h6 id="_3-后序遍历"><a href="#_3-后序遍历" class="header-anchor">#</a> （3）后序遍历</h6> <p>LRD：左子树——右子树——根节点</p> <p>每次遍历到一个节点都重复一次后序遍历</p> <p>代码实现</p> <div class="language- extra-class"><pre class="language-text"><code>const perorder = (node) =&gt;{
+    if(!node)return;
+    perorder(node.left);
+    perorder(node.right);
+    console.log(node.val);
+}
+perorder(tree)
+//4 5 2 6 7 3 1
+</code></pre></div><p><strong>注意：</strong>
+前序遍历第一个为根节点
+中序遍历根节点左边为左子树，右边为右子树
+后序遍历最后一个为根节点</p> <h3 id="_6-堆heap"><a href="#_6-堆heap" class="header-anchor">#</a> 6.堆heap</h3> <p><strong>堆是一种特殊的完全二叉树</strong></p> <p>每层节点全部都填满，最后一层如果不是满的，只能缺少右边的节点，下图为最大堆的示例</p> <div class="language- extra-class"><pre class="language-text"><code>     6
+   /   \
+  5     3
+ / \   / 
+4   2 1   
+</code></pre></div><p>所有的节点都大于等于（最大堆）或者小于等于（最小堆）他的子节点</p> <h4 id="js中的堆"><a href="#js中的堆" class="header-anchor">#</a> <strong>js中的堆</strong></h4> <p>js中通常<strong>用数组来表示堆，按照广度优先的方式存储在数组中</strong></p> <p>根据广度优先的特点可以得到子节点在数组中的存储位置（index代表当前节点在数组中的下标）</p> <p>左侧子节点的位置是2 * index+1
+右侧子节点的位置是2 * index+1
+父节点位置是（index - 1）/ 2</p> <div class="language- extra-class"><pre class="language-text"><code>        1(0)
+       /   \
+     (1)3  6(2)
+     / \   / 
+  (3)5  9 8(5)  
+    136598
+    012345
+</code></pre></div><h5 id="第k个最大元素"><a href="#第k个最大元素" class="header-anchor">#</a> 第k个最大元素</h5> <p>主要方法 ：</p> <h6 id="插入元素-最小堆"><a href="#插入元素-最小堆" class="header-anchor">#</a> 插入元素（最小堆）</h6> <p>构建一个最小堆，并将元素依次添加到堆中，</p> <p>将值插入堆的底部，也就是数组的尾部
+上移，将这个值与其父节点进行交换，直到父节点小于等于这个插入的值
+大小为k的堆中插入元素的时间复杂度为O(logk)</p> <h6 id="删除堆顶"><a href="#删除堆顶" class="header-anchor">#</a> 删除堆顶</h6> <p>当堆的容量超过了k就删除堆顶</p> <p>用数组尾部元素替换堆顶（直接删除堆顶会破坏堆解构）
+下移，将新堆顶和子节点进行交换，直到子节点大于这个堆顶
+大小为k的堆中删除堆顶的时间复杂度为O（logk）</p> <h6 id="获取堆顶"><a href="#获取堆顶" class="header-anchor">#</a> 获取堆顶</h6> <p>插入结束后堆顶就是第k个最大元素</p> <h6 id="获取堆大小"><a href="#获取堆大小" class="header-anchor">#</a> 获取堆大小</h6> <p>数组长度就是堆的大小</p> <h6 id="代码实现最小堆类"><a href="#代码实现最小堆类" class="header-anchor">#</a> 代码实现最小堆类</h6> <div class="language- extra-class"><pre class="language-text"><code>class  minHeap{
+    constructor(){
+        this.heap = []; 
+    }
+    // 获取父节点在数组中的下标
+    getParentIndex(i){
+        return Math.floor((i-1)/2)
+        //二进制写法
+        // return (i - 1) &gt;&gt; 1
+    }
+    // 获取左侧节点在数组中的下标
+    getLeftIndex(i){
+        return i * 2 + 1
+    }
+    // 获取右侧节点在数组中的下标
+    getRightIndex(i){
+        return i * 2 + 2
+    }
+
+    // 定义节点交换的方法
+    swap(i1,i2){
+        const temp = this.heap[i1];
+        this.heap[i1] = this.heap[i2];
+        this.heap[i2] = temp;
+
+    }
+    // 定义上移方法
+    shiftUp(index){
+        if(index==0){
+            return;
+        }
+        // 不停的和父节点交换位置，直到小于等于父节点的值
+        const parentIndex = this.getParentIndex(index)
+        if(this.heap[parentIndex] &gt; this.heap[index]){
+            this.swap(parentIndex,index)
+            this.shiftUp(parentIndex)
+        }
+    }
+    // 定义下移方法
+    shiftDown(index){
+        const liftIndex = this.getLeftIndex(index)
+        const RightIndex = this.getRightIndex(index)
+        if(this.heap[liftIndex] &lt; this.heap[index]){
+            this.swap(liftIndex,index)
+            this.shiftDown(liftIndex)
+        }
+        if(this.heap[RightIndex] &lt; this.heap[index]){
+            this.swap(RightIndex,index)
+            this.shiftDown(RightIndex)
+        }
+    }
+    // 插入方法
+    insert (value){
+        // 将元素插入到数组的最后一位
+        this.heap.push(value)
+        
+        // 因为插入的元素为数组的最后一位，所以传入的参数是heap.length-1
+        this.shiftUp(this.heap.length-1)
+    }
+    // 删除方法
+    delect(){
+        // pop可以删除数组的最后一个元素并返回这个元素
+        this.heap[0] =  this.heap.pop();
+        this.shiftDown(0)
+    } 
+    //获取堆顶
+    peek(){
+    	return this.heap[0]
+    }
+    //获取堆大小
+    size(){
+		return this.heap.length
+	}
+}
+// 实例化一个最小堆
+const h = new minHeap();
+
+//插入几个数字测试
+h.insert(3);
+h.insert(2);
+h.insert(1);
+//虽然不能保证是按照最小堆来排列，但是能保证堆顶最小，也就是父节点的元素一定大于子节点的元素
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/learn-vue/javascript/regular-expression/" class="prev">
+          正则表达式
+        </a></span> <span class="next"><a href="/learn-vue/uni-app/performance/">
+          性能优化
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_1-queue-队列" class="sidebar-link reco-side-_1-queue-队列" data-v-b57cc07c>1.Queue 队列</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_2-stack-栈" class="sidebar-link reco-side-_2-stack-栈" data-v-b57cc07c>2.Stack 栈</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_3-linked-list-链表" class="sidebar-link reco-side-_3-linked-list-链表" data-v-b57cc07c>3.Linked List 链表</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_4、集合" class="sidebar-link reco-side-_4、集合" data-v-b57cc07c>4、集合</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_5-树" class="sidebar-link reco-side-_5-树" data-v-b57cc07c>5.树</a></li><li class="level-3" data-v-b57cc07c><a href="/learn-vue/javascript/data-structure/#_6-堆heap" class="sidebar-link reco-side-_6-堆heap" data-v-b57cc07c>6.堆heap</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/learn-vue/assets/js/app.d16f716d.js" defer></script><script src="/learn-vue/assets/js/3.dfda982a.js" defer></script><script src="/learn-vue/assets/js/1.f474e8b5.js" defer></script><script src="/learn-vue/assets/js/13.03bff369.js" defer></script>
+  </body>
+</html>
